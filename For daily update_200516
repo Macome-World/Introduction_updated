@@ -1,0 +1,352 @@
+<!DOCTYPE html> <!-- The <!DOCTYPE html> declaration defines this document to be HTML5 -->
+
+<html> <!--The <html> element is the root element of an HTML page -->
+
+<header> <!--The <head> element contains meta information about the document -->
+
+<title>Macome Jaime</title>  <!--The <title> element specifies a title for the document -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * 
+    {
+      box-sizing: border-box;
+    }
+
+    /* Style the header */
+    header 
+    {
+      background-color: #666;
+      padding: 5px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+
+    /* Container for flexboxes */
+    section 
+    {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    /* Style the navigation menu */
+    nav 
+    {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      background: #ccc;
+      padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul 
+    {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* Style the content */
+    article 
+    {
+      -webkit-flex: 3;
+      -ms-flex: 3;
+      flex: 3;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    /* Style the footer */
+    footer 
+    {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+    @media (max-width: 600px) 
+    {
+      section 
+      {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+
+    body
+    {
+        background-color: whitesmoke;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h1
+    {
+      color: rgb(255, 255, 255); 
+    }
+
+    button
+    {
+        background-color: white;
+    }
+
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+      text-shadow: rgb(209, 15, 57);
+    }
+
+    a:visited 
+    {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover 
+    {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active 
+    {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:link, a:visited 
+    {
+      background-color: lightblue;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border: 1px solid blue;
+    }
+
+    a:hover, a:active 
+    {
+      background-color: white;
+    }
+
+    table, th, td 
+    {
+      border: 1px solid blue;
+      text-align: center;
+      border-collapse: unset;
+      border-spacing: 3px;
+      padding: 5px;
+      font-size: 15px;
+    }
+
+    .T05
+    {
+      background-color: lightgreen;
+      padding: 15px;
+    }
+
+    .T06
+    {
+      background-color: lightgreen;
+      padding: 15px;
+    }
+
+    table
+    {
+      width: 50%;
+      
+    }
+
+    caption
+    {
+      text-align: left;
+    }
+
+    th
+    {
+      background-color: black;
+      color: white;
+      
+    }
+
+    tr#T01
+    {
+      background-color:lightblue;
+      color: black;
+      
+    }
+
+    tr#T02
+    {
+      background-color: rgb(240, 230, 230);
+      color: rgb(11, 13, 14);  
+    }
+
+    tr#T03
+    {
+      background-color: lightblue;
+      color: black  
+    }
+
+    tr#T04
+    {
+      background-color: rgb(240, 230, 230);
+      color: rgb(11, 13, 14);  
+    }
+
+    div#Academic
+    {
+      background-color: lightcyan;
+      border: 1px solid blue;
+      padding: 5px;
+      
+    }
+
+  </style> 
+
+</header>
+
+  <body> <!--The <body> element contains the visible page content -->
+
+    <header>
+      <h1 id="hello">   <!--The <h1> element defines a large heading -->
+        Macome Biography
+      </h1>
+    </header>
+
+    <section>
+      <nav>
+        <button type="button" onclick="myFunction()" class="T05">Click to greet</button>
+        <button type="button" onclick="myFunction1()" class="T06">Click to return</button>
+
+
+        <h3>My background Certificates</h3>
+        <a href="diplomas.pdf" target="_blank" id="certificates">University Certificates                  <!-- The <a> tag is made for links attribution-->
+        </a>
+    
+        <h3>Credit card Payment of April</h3>
+    
+        <a href="statement_202004.pdf" target="_blank" id="statment 3">Rakuten payment statment 3                <!-- The <a> tag is made for links attribution-->
+        </a>
+    
+        <h3>Credit card Payment of March</h3>
+    
+        <a href="statement_202003.pdf" target="_blank" id="statment 2">Rakuten payment statment 2                <!-- The <a> tag is made for links attribution-->
+        </a>
+    
+        <h3>Credit card Payment of February</h3>
+    
+        <a href="statement_202002.pdf" target="_blank" id="statment 1">Rakuten payment statment 1                 <!-- The <a> tag is made for links attribution-->
+        </a>
+
+        
+      <script>
+        function myFunction() 
+        { 
+          document.getElementById("hello").innerHTML = "Thank you for visiting our page!";
+        }
+      </script>
+
+      <script>
+        function myFunction1() 
+        { 
+          document.getElementById("hello").innerHTML = "Macome Biography";
+        }
+      </script>
+      <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+      </nav>
+
+
+      <article>
+      <img src="image.jpg" alt="The first image of the introduction to HTML5" width="500" height="300">    <!-- The <img> tag is the image tag attribute-->
+
+      <p title="Paragraph">  <!--The <p> element defines a paragraph -->
+        Born June 22 1987, in Maputo City, Mozambique. <br>
+        Grow and spenty the entire childhood in the small town on Laulane. 
+      </p>
+
+      <div id="Academic">
+        <h2> Academic information</h2>
+        <p>
+          Studied in the local Primary School of Laulane from the grade 1<sup>st</sup> in 1995 (8 years old) to grade 7<sup>th</sup> in 2002 (15 years old). <br>
+          Later, in order to continue with the studies, entered Secondary school located a relatively far away from the small town.<br>
+          The Secondary School of Mahlazine, is located near a Military base of the Mozambique National Defence.<br> 
+        </p>
+
+        <p> 
+          In the Secoondary School of Mahlazine, completed the grades 8<sup>th</sup> in 2003 (16 years old) to 10<sup>th</sup> in 2006 (19 years old) and <br>
+          moved to another Secondary School. The Secondary is named Eduardo Mondlane Secondary School and it is located near the  <br>
+          Home town making it easy to commute. At Eduardo Mondlane Secondary School, completed the grades 11<sup>th</sup> in 2007 <br>
+          (20 years old) and 12<sup>th</sup> in 2008 (21 years old).</p>
+
+        <p>
+          2 years later after graduating from Secondary School, entered University and studied Chemistry. The Mozambique biggest and <br>
+          oldest University named after the first President of Major Mozambique Party <abbr title="Front of Mozambique Liberation Party">Frelimo</abbr>, Eduardo Mondlane University.<br>
+        </p>
+        <P>
+          In Eduarde Mondlane Univerity, played very important roles which had a huge impact in the upcoming years. Such important roles includes but not only<br>
+          being the president of the students association in the Science Faculty, Joining the <abbr title="Movimento Impacto Estudantil translated as Syudents impact Movement">MIMPE</abbr>, a University Students related movement run by Christian Church<br>
+          Organization abbreviated <abbr title="Campus Crusade for Christ Mozambique">CCCM</abbr>. Studying foreign languages such as English and French, and others.<br>
+
+        </P>
+
+      <h2>Family members details</h2>
+      <table>
+        <caption>Introduction of the family members</caption>     <!-- This is the caption (Title) of the table-->
+        <tr>
+          <th>Family name</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+        <tr id="T01">
+          <td>Macome</td>
+          <td>Jaime</td>
+          <td>32</td>
+          <td>Male</td>
+        </tr>
+        <tr id="T02">
+          <td>Macome</td>
+          <td>Kanako</td>
+          <td>31</td>
+          <td>Female</td>
+        </tr>
+        <tr id="T03">
+          <td>Macome</td>
+          <td>Airi</td>
+          <td>2</td>
+          <td>Female</td>
+        </tr>
+        <tr id="T04">
+          <td>Macome</td>
+          <td>Kei</td>
+          <td>1</td>
+          <td>Male</td>
+        </tr>
+      </table>
+
+    </article>
+
+    </section>
+    <footer>
+      <address style="position: relative; text-align: left">
+      Written by Macome Jaime.<br>
+      Visit us at:<br>
+      Macome.com<br>
+      contact us by 080-7823-9645<br>
+      京都府京丹後市久美浜町215<br>
+      日本
+      </address>
+    </footer>
+
+
+  </body>
+</html>
